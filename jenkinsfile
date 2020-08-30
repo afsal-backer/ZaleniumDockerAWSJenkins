@@ -33,7 +33,7 @@ pipeline {
                }
              }
              
-             stage('Open Salesforce Test')
+             stage('Open Target Test')
             {
               steps 
               {

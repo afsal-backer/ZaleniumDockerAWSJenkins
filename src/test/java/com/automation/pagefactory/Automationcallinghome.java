@@ -42,7 +42,7 @@ public class Automationcallinghome extends SeleniumUtil
 
         
         driver.findElement(By.id("password")).sendKeys("test@2020");
-        Thread.sleep(2000);
+        Thread.sleep(10000);
         
         System.out.println("Entered password.");
     }

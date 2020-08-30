@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ParallelAutomation">
+
+    <test name="chrome_local">
+        <parameter name="browsertype" value="chrome"/>
+        <parameter name="executionType" value="remote"/>
+        <parameter name="url" value="https://www.target.com"/>
+        <classes>
+            <class name="com.automationcalling.testsuites.BasicTests2"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,62 @@
+pipeline {
+  agent any
+  stages {
+    stage('Initialising Environment') {
+      parallel {
+        stage('Git Fetch') {
+          steps {
+            git(url: 'https://github.com/gm4afsal/ZalPal.git')
+          }
+        }
+      }
+    }
+
+    stage('Execute Tests') 
+    {
+      parallel 
+      {
+            stage('Execute Tests') 
+            {
+              steps {
+                echo 'Start Execution'
+                sh 'docker run --rm -ti --name zaleniumPipeline -d -p 4444:4444 -e PULL_SELENIUM_IMAGE=true -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start'
+              }
+            }
+
+            
+        
+            stage('Open Salesforce Test')
+            {
+              steps 
+              {
+                sh 'mvn test -DfileName="single.xml"'
+               }
+             }
+             
+             stage('Open Salesforce Test')
+            {
+              steps 
+              {
+                sh 'mvn test -DfileName="double.xml"'
+               }
+             }
+        }
+    }
+
+    stage('Close Tests') {
+      parallel {
+        stage('Close Tests') {
+          steps {
+            echo 'Execution Completed'
+            sh 'docker stop zaleniumPipeline'
+          }
+        }
+      }
+    }
+
+  }
+  tools {
+    maven 'maven'
+    jdk 'java'
+  }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [ParallelAutomation]">
+  <parameter name="executionType" value="remote"/>
+  <parameter name="browsertype" value="chrome"/>
+  <parameter name="url" value="https://www.target.com"/>
+  <test parallel="classes" name="chrome_local(failed)">
+    <parameter name="executionType" value="remote"/>
+    <parameter name="browsertype" value="chrome"/>
+    <parameter name="url" value="https://www.flipkart.com"/>
+    <classes>
+      <class name="com.automationcalling.testsuites.BasicTests">
+        <methods>
+          <include name="init"/>
+          <include name="articleLinkTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automationcalling.testsuites.BasicTests -->
+      <class name="com.automationcalling.testsuites.BasicTests1">
+        <methods>
+          <include name="init"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automationcalling.testsuites.BasicTests1 -->
+      <class name="com.automationcalling.testsuites.BasicTests2">
+        <methods>
+          <include name="tearDown"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.automationcalling.testsuites.BasicTests2 -->
+    </classes>
+  </test> <!-- chrome_local(failed) -->
+</suite> <!-- Failed suite [ParallelAutomation] -->

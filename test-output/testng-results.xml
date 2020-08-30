@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="3" passed="2" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-08-30T10:10:24Z" name="ParallelAutomation" finished-at="2020-08-30T10:11:04Z" duration-ms="39989">
+    <groups>
+    </groups>
+    <test started-at="2020-08-30T10:10:24Z" name="chrome_local" finished-at="2020-08-30T10:10:33Z" duration-ms="8620">
+      <class name="com.automationcalling.testsuites.BasicTests">
+        <test-method is-config="true" signature="init(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automationcalling.testsuites.BasicTests@6328d34a]" started-at="2020-08-30T15:40:24Z" name="init" finished-at="2020-08-30T15:40:26Z" duration-ms="1910" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[remote]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.flipkart.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="articleLinkTest()[pri:0, instance:com.automationcalling.testsuites.BasicTests@6328d34a]" started-at="2020-08-30T15:40:26Z" name="articleLinkTest" finished-at="2020-08-30T15:40:33Z" duration-ms="6627" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#username"}
+  (Session info: chrome=84.0.4147.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'blr-ml-abacker', ip: 'fe80:0:0:0:108f:1807:a401:d84%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.1', java.version: '13.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /tmp/.com.google.Chrome.pygtu8}, goog:chromeOptions: {debuggerAddress: localhost:35777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: ec34dbbed8a650296687a790066...}
+Session ID: ec34dbbed8a650296687a790066fa8c3
+*** Element info: {Using=id, value=username}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#username"}
+  (Session info: chrome=84.0.4147.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'blr-ml-abacker', ip: 'fe80:0:0:0:108f:1807:a401:d84%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.1', java.version: '13.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /tmp/.com.google.Chrome.pygtu8}, goog:chromeOptions: {debuggerAddress: localhost:35777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: ec34dbbed8a650296687a790066...}
+Session ID: ec34dbbed8a650296687a790066fa8c3
+*** Element info: {Using=id, value=username}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.automation.pagefactory.Automationcallinghome.clickArticlelink(Automationcallinghome.java:34)
+	at com.automationcalling.testsuites.BasicTests.articleLinkTest(BasicTests.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- articleLinkTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationcalling.testsuites.BasicTests@6328d34a]" started-at="2020-08-30T15:40:33Z" name="tearDown" finished-at="2020-08-30T15:40:33Z" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automationcalling.testsuites.BasicTests -->
+    </test> <!-- chrome_local -->
+    <test started-at="2020-08-30T10:10:33Z" name="chrome_local1" finished-at="2020-08-30T10:10:51Z" duration-ms="18330">
+      <class name="com.automationcalling.testsuites.BasicTests1">
+        <test-method is-config="true" signature="init(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automationcalling.testsuites.BasicTests1@14a2f921]" started-at="2020-08-30T15:40:33Z" name="init" finished-at="2020-08-30T15:40:37Z" duration-ms="3643" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[remote]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.amazon.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="articleLinkTest()[pri:0, instance:com.automationcalling.testsuites.BasicTests1@14a2f921]" started-at="2020-08-30T15:40:37Z" name="articleLinkTest" finished-at="2020-08-30T15:40:44Z" duration-ms="7706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- articleLinkTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationcalling.testsuites.BasicTests1@14a2f921]" started-at="2020-08-30T15:40:44Z" name="tearDown" finished-at="2020-08-30T15:40:51Z" duration-ms="6977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automationcalling.testsuites.BasicTests1 -->
+    </test> <!-- chrome_local1 -->
+    <test started-at="2020-08-30T10:10:51Z" name="chrome_local2" finished-at="2020-08-30T10:11:04Z" duration-ms="12976">
+      <class name="com.automationcalling.testsuites.BasicTests2">
+        <test-method is-config="true" signature="init(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automationcalling.testsuites.BasicTests2@1d548a08]" started-at="2020-08-30T15:40:51Z" name="init" finished-at="2020-08-30T15:40:52Z" duration-ms="1014" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[remote]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.target.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="articleLinkTest()[pri:0, instance:com.automationcalling.testsuites.BasicTests2@1d548a08]" started-at="2020-08-30T15:40:52Z" name="articleLinkTest" finished-at="2020-08-30T15:41:04Z" duration-ms="11884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- articleLinkTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automationcalling.testsuites.BasicTests2@1d548a08]" started-at="2020-08-30T15:41:04Z" name="tearDown" finished-at="2020-08-30T15:41:04Z" duration-ms="74" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automationcalling.testsuites.BasicTests2 -->
+    </test> <!-- chrome_local2 -->
+  </suite> <!-- ParallelAutomation -->
+</testng-results>

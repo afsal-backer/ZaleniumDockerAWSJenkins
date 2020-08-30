@@ -4,7 +4,7 @@
     <test name="chrome_local">
         <parameter name="browsertype" value="chrome"/>
         <parameter name="executionType" value="remote"/>
-        <parameter name="url" value="https://www.flipkart.com"/>
+        <parameter name="url" value="https://login.salesforce.com"/>
         <classes>
             <class name="com.automationcalling.testsuites.BasicTests"/>
         </classes>
